@@ -1,0 +1,320 @@
+@font-face {
+    src: url(../fonts/Formula1-Regular.otf);
+    font-family: 'Formula1';  
+    font-weight: normal;
+}
+@font-face {
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-family: 'Roboto', sans-serif; 
+    font-weight: normal;
+}
+body{
+    font-family: 'Roboto', sans-serif; 
+    color: #2d314d;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+  }
+nav ul li {
+    display: inline-block;
+    margin: 0 22px;
+  }
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: #555;
+}
+  /* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background-image: linear-gradient(to right, #FF000F ,#c50310);
+    height: 5px;
+    border-radius: 10px 0;
+}
+nav.stroke ul li a:hover:after {
+    width: 80%;
+} 
+nav.fill ul li a {
+    transition: all 2s;
+} 
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+nav.fill ul li a:hover {
+    color: red;
+    z-index: 1;
+}
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+#particles-js {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#home h1{
+    font-family: 'Formula1';  
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+/* main*/
+.text-gray{
+    color: #9698A6;
+}
+.mt-40{
+    margin-top: 40px;
+}
+/* NAVIGATION */
+.navbar-dark .navbar-nav .nav-link {
+    color: #1F1F1F;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #c4c4c4;
+}
+.navbar{
+    z-index: 1;
+    height: 10vh;
+}
+/* menu */
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,0); 
+    border-color: rgba(255,255,255,0);
+    outline: none;
+}
+.icon {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 47px;
+    height: 34px;
+    border:none;
+    cursor: pointer; 
+}
+.hamburguer{
+    margin-bottom: 5px;
+    width: 30px;
+    height: 2px;
+    background: #1F1F1F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .5s;
+}
+.hamburguer:before,.hamburguer:after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #1F1F1F;
+    box-shadow: 0 2px 5px (0,0,0,0.2);
+    transition: .5s;
+    left:0 ;
+}
+.hamburguer:before{
+    top: -8px;
+}
+.hamburguer:after{
+    top: 8px;
+}
+.icon.active .hamburguer{
+    background: rgba(0, 0, 0,0);
+}
+.icon.active .hamburguer:before{
+    top: 0;
+    transform: rotate(45deg);
+}
+.icon.active .hamburguer:after{
+    top: 0;
+    transform: rotate(135deg);
+}
+
+/* home */
+.header-img-banner{
+    position: absolute;
+    top: -200px;
+    right: 0;
+    z-index: 0;
+}
+.pd-header{
+    padding-left: 0;
+}
+.headerwrap {
+    background-repeat: no-repeat;
+    background-image: url(../img/exp_bg1.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 90vh;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 20;
+}
+.headerwrap:before {
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    background: rgba(248,80,50,0);
+    background: -moz-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,0)), color-stop(70%, rgba(96,46,37,0)), color-stop(100%, rgba(31,31,31,1)));
+    background: -webkit-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
+    background: -o-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
+    background: -ms-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
+    background: linear-gradient(to bottom, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#1f1f1f', GradientType=0 );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:0;
+}
+.car-mobile{
+    display: none;
+}
+/* section about */
+#about{
+    padding: 60px 0 0 0;
+    background-color: #1F1F1F;
+}
+#about h1{
+    font-weight: bold;
+    font-family: 'Formula1'; 
+    font-size: 3.5rem;
+}
+
+/* section blog */
+#support{
+    padding: 80px 0;
+    background-color: #FAFAFA;
+}
+#support h1{
+    font-weight: bold;
+    font-family: 'Formula1'; 
+    font-size: 3rem;
+}
+footer{
+    padding: 50px 0;
+    background-color: #C4C4C4;
+}
+
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+footer ul li{
+    margin: 8px;
+}
+footer ul li:hover{
+    color: #1F1F1F;
+    cursor: pointer;
+}
+.icon-media{
+    cursor: pointer;
+    z-index: 10;
+}
+.icon-header{
+    cursor: pointer;
+    z-index: 22;
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0.5;
+}
+
+/** Mobile **/
+@media only screen and (max-width: 768px) {
+    #about h1{
+        font-size: 2.5rem;
+    }
+    .header-img-banner {
+        position: absolute;
+        top: -88px;
+        right: 0;
+        z-index: 0;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .navbar-collapse{
+        background-color: #C4C4C4;
+        padding: 20px;
+        border-radius: 18px;
+    }
+    .header-img-banner {
+        position: absolute;
+        top: -59px;
+        right: 0;
+        z-index: 0;
+    }
+    .car-mobile{
+        display: block;
+    }
+    .car{
+        display: none;
+    }
+    #home h1{
+        font-family: 'Formula1';  
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    #about h1{
+        font-size: 2.5rem;
+    }
+    #about .row{
+        flex-direction: column-reverse!important;
+    }
+    .pd-header{
+        padding: 15px 15px 15px 15px;
+        text-align: center;
+    }
+    #about .container{
+        text-align: center;
+    }
+    
+    #support .container h1{
+        text-align: center;
+    }
+    footer .container{
+        text-align: center;
+    }
+    .icon-media{
+        justify-content: center!important;
+    }
+
+}
