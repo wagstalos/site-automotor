@@ -89,10 +89,15 @@ nav.fill ul li a:hover:after {
     font-weight: bold;
     font-size: 3.5rem;
 }
+#home h4{
+    font-family: 'Formula1'; 
+    font-weight: bold; 
+}
+
 
 /* main*/
 .text-gray{
-    color: #9698A6;
+    color: #4F4D4D;
 }
 .mt-40{
     margin-top: 40px;
@@ -185,14 +190,14 @@ nav.fill ul li a:hover:after {
 .headerwrap:before {
     content: "";
     width: 100%;
-    min-height: 100%;
+    min-height: 125%;
     background: rgba(248,80,50,0);
-    background: -moz-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,0)), color-stop(70%, rgba(96,46,37,0)), color-stop(100%, rgba(31,31,31,1)));
-    background: -webkit-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
-    background: -o-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
-    background: -ms-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
-    background: linear-gradient(to bottom, rgba(248,80,50,0) 0%, rgba(96,46,37,0) 70%, rgba(31,31,31,1) 100%);
+    background: -moz-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(108,48,38,0) 51%, rgba(31,31,31,0.97) 79%, rgba(31,31,31,1) 80%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,0)), color-stop(51%, rgba(108,48,38,0)), color-stop(79%, rgba(31,31,31,0.97)), color-stop(80%, rgba(31,31,31,1)));
+    background: -webkit-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(108,48,38,0) 51%, rgba(31,31,31,0.97) 79%, rgba(31,31,31,1) 80%);
+    background: -o-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(108,48,38,0) 51%, rgba(31,31,31,0.97) 79%, rgba(31,31,31,1) 80%);
+    background: -ms-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(108,48,38,0) 51%, rgba(31,31,31,0.97) 79%, rgba(31,31,31,1) 80%);
+    background: linear-gradient(to bottom, rgba(248,80,50,0) 0%, rgba(108,48,38,0) 51%, rgba(31,31,31,0.97) 79%, rgba(31,31,31,1) 80%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#1f1f1f', GradientType=0 );
     position: absolute;
     top: 0;
@@ -227,7 +232,6 @@ footer{
     padding: 50px 0;
     background-color: #C4C4C4;
 }
-
 footer ul{
     list-style-type: none;
     margin: 0;
@@ -239,6 +243,15 @@ footer ul li{
 footer ul li:hover{
     color: #1F1F1F;
     cursor: pointer;
+}
+.digital-pages{
+    padding: 1rem;
+}
+.digital-pages p{
+    margin-bottom: 0;
+}
+#logo{
+    background-color: #a09f9f;
 }
 .icon-media{
     cursor: pointer;
@@ -272,9 +285,12 @@ footer ul li:hover{
 }
 @media only screen and (max-width: 600px) {
     .navbar-collapse{
-        background-color: #C4C4C4;
+        background-color: #fffefe;
         padding: 20px;
         border-radius: 18px;
+        -webkit-box-shadow: 6px 7px 32px -4px rgba(0,0,0,0.33);
+        -moz-box-shadow: 6px 7px 32px -4px rgba(0,0,0,0.33);
+        box-shadow: 6px 7px 32px -4px rgba(0,0,0,0.33);
     }
     .header-img-banner {
         position: absolute;
@@ -283,7 +299,7 @@ footer ul li:hover{
         z-index: 0;
     }
     .car-mobile{
-        display: block;
+        display: none;
     }
     .car{
         display: none;
@@ -306,7 +322,6 @@ footer ul li:hover{
     #about .container{
         text-align: center;
     }
-    
     #support .container h1{
         text-align: center;
     }
@@ -316,5 +331,4 @@ footer ul li:hover{
     .icon-media{
         justify-content: center!important;
     }
-
 }
